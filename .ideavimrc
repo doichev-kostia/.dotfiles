@@ -1,0 +1,30 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+set number relativenumber
+set ideajoin
+set idearefactormode=keep
+set scrolloff = 5
+set tabstop = 4
+set softtabstop = 4
+set shiftwidth = 4
+set expandtab = true
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+" Nerd tree plugin for file system explorer navigation using h,j,k,l
+set NERDTree
+let g:NERDTreeMapActivateNode = 'l'
