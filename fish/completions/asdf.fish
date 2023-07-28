@@ -1,0 +1,1 @@
+/Users/panenco/.asdf/completions/asdf.fish
