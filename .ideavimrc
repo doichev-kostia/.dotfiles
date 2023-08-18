@@ -18,12 +18,28 @@ set incsearch
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
+if s:MaySet('backspace')
+  set backspace=indent,eol,start
+endif
+
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 
 " Highlight copied text
 Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 Plug 'tpope/vim-commentary'
+" Surround plugin
+Plug 'tpope/vim-surround'
+" Repeat plugin
+Plug 'tpope/vim-repeat'
+" Easymotion plugin
+Plug 'easymotion/vim-easymotion'
+" Git plugin
+Plug 'tpope/vim-fugitive'
+" Commentary
+Plug 'tpope/vim-commentary'
+
+
 
 " Nerd tree plugin for file system explorer navigation using h,j,k,l
 set NERDTree
