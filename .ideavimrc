@@ -38,7 +38,10 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-fugitive'
 " Commentary
 Plug 'tpope/vim-commentary'
+" Scope plugin
+Plug 'wellle/context.vim'
 
+let g:context_enabled = 1:
 
 
 " Nerd tree plugin for file system explorer navigation using h,j,k,l
