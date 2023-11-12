@@ -10,9 +10,6 @@ set -gx PATH "$PNPM_HOME" $PATH
 set -gx PATH "$HOME/.cargo/bin" $PATH;
 source ~/.asdf/asdf.fish
 
-source (pack completion --shell fish)
-
-
 bind \cO 'fzf_cd'
 
 
