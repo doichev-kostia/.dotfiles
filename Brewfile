@@ -1,33 +1,42 @@
 tap "homebrew/bundle"
-# Clone of cat(1) with syntax highlighting and Git integration
+tap "pkgxdev/made"
+tap "stripe/stripe-cli"
+brew "openssl@3"
+brew "autoconf"
 brew "bat"
-# Modern replacement for 'ls'
 brew "exa"
-# Simple, fast and user-friendly alternative to find
 brew "fd"
-# Command-line tools for fly.io services
 brew "flyctl"
-# Fast and simple Node.js version manager
 brew "fnm"
-# Command-line fuzzy finder written in Go
+brew "fop"
 brew "fzf"
-# GitHub command-line tool
+brew "gawk"
 brew "gh"
-# GNU implementation of the famous stream editor
 brew "gnu-sed"
-# Powerful, lightweight programming language
+brew "gnu-tar"
+brew "gnupg"
+brew "jq"
+brew "julia"
+brew "libxslt"
 brew "lua"
-# Ambitious Vim-fork focused on extensibility and agility
+brew "luarocks"
 brew "neovim"
-# HTTP load generator, inspired by rakyll/hey with tui animation
 brew "oha"
-# Search tool like grep and The Silver Searcher
+brew "opam"
+brew "parallel"
+brew "php"
+brew "pinentry-mac"
+brew "postgresql@15"
+brew "railway"
 brew "ripgrep"
-# SOcket CAT: netcat on steroids
 brew "socat"
-# Command-line client for WebSockets
+brew "tmux"
+brew "tree"
 brew "websocat"
-# Command-line interface for 1Password
+brew "wget"
+brew "wxwidgets"
+brew "pkgxdev/made/pkgx"
+brew "stripe/stripe-cli/stripe"
 cask "1password-cli"
 vscode "13xforever.language-x86-64-assembly"
 vscode "adpyke.vscode-sql-formatter"
