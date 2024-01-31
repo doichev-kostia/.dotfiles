@@ -15,6 +15,9 @@ require('lazy').setup("doichev-kostia.plugins",
     {
         dev= {
             path= '~/.dotfiles/nvim/plugins/',
+        },
+        change_detection = {
+            notify = false
         }
     }
 )

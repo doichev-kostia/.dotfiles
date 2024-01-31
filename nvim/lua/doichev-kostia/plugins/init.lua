@@ -25,10 +25,6 @@ return {
     { 'numToStr/Comment.nvim', opts = {} },
 
     {
-        'mbbill/undotree'
-    },
-
-    {
         'github/copilot.vim',
     },
 

@@ -22,6 +22,11 @@ if s:MaySet('backspace')
   set backspace=indent,eol,start
 endif
 
+let mapleader = " "
+
+unmap <leader><leader>
+
+
 " Remap for dealing with word wrap
 nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
 nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
@@ -30,6 +35,12 @@ nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 
+" Map <leader>y to yank in normal and visual mode to the clipboard
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+
+" Map <leader>Y to yank the entire line in normal mode to the clipboard
+nnoremap <leader>Y "+yy
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 
