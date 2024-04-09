@@ -23,3 +23,5 @@ set --export PATH $BUN_INSTALL/bin $PATH
 
 # opam configuration
 source /Users/panenco/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+
+direnv hook fish | source
