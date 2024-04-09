@@ -20,4 +20,33 @@ config.window_padding = {
 
 config.tab_bar_at_bottom = true
 
+-- config.debug_key_events = true
+
+config.keys = {
+	{
+		key = 'Tab',
+		mods = 'CTRL',
+		action = wezterm.action.DisableDefaultAssignment
+	},
+	{
+		key = 'Tab',
+		mods = 'SHIFT|CTRL',
+		action = wezterm.action.DisableDefaultAssignment
+	},
+	{
+		key = 'n',
+		mods = 'CTRL',
+		action = wezterm.action.DisableDefaultAssignment
+	},
+	{
+		key = 'p',
+		mods = 'CTRL',
+		action = wezterm.action.DisableDefaultAssignment
+	},
+	{
+		key = 'z',
+		mods = 'CMD',
+		action = wezterm.action.SendKey({ key = 'z', mods = 'CTRL' }),
+	}
+}
 return config
