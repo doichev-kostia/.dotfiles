@@ -2,12 +2,20 @@ return {
     'nvim-lua/plenary.nvim',
 
     {
-        "folke/tokyonight.nvim",
+        "rose-pine/neovim",
+        as = "rose-pine",
         lazy = false,
         priority = 1000,
-        opts = {
-            style = "night",
-        },
+        config = function()
+            require('rose-pine').setup({
+                variant = 'dawn',
+                enable = {
+                    terminal = true,
+                    legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
+                    migrations = true, -- Handle deprecated options automatically
+                },
+            })
+        end,
     },
 
     'tpope/vim-fugitive',

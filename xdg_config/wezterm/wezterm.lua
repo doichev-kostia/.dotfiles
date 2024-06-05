@@ -6,7 +6,14 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.font = wezterm.font 'JetBrains Mono'
+local theme = require('lua/rose-pine').dawn
+config.colors = theme.colors()
+config.window_frame = theme.window_frame()
+
+config.font = wezterm.font {
+  family = 'JetBrains Mono',
+  harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
+}
 config.font_size = 16.0
 
 config.use_fancy_tab_bar = true
@@ -42,11 +49,7 @@ config.keys = {
 		key = 'p',
 		mods = 'CTRL',
 		action = wezterm.action.DisableDefaultAssignment
-	},
-	{
-		key = 'z',
-		mods = 'CMD',
-		action = wezterm.action.SendKey({ key = 'z', mods = 'CTRL' }),
 	}
 }
+
 return config
