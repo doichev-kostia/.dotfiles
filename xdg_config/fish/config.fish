@@ -25,3 +25,7 @@ set --export PATH $BUN_INSTALL/bin $PATH
 source /Users/panenco/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 
 direnv hook fish | source
+
+# go
+set --export GOBIN "$HOME/go/bin"
+set --export PATH $GOBIN $PATH
