@@ -42,6 +42,8 @@ vnoremap <leader>y "+y
 " Map <leader>Y to yank the entire line in normal mode to the clipboard
 nnoremap <leader>Y "+yy
 
+map gr <Action>(FindUsages)
+
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 
 " Highlight copied text
