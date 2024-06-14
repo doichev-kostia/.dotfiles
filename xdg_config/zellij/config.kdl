@@ -6,7 +6,7 @@ theme "rose-pine-dawn"
 keybinds {
     normal {
         // uncomment this and adjust key if using copy_on_select=false
-        // bind "Alt c" { Copy; }
+        bind "Alt c" { Copy; }
     }
     locked {
         bind "Ctrl g" { SwitchToMode "Normal"; }
@@ -84,7 +84,7 @@ keybinds {
         bind "d" { HalfPageScrollDown; }
         bind "u" { HalfPageScrollUp; }
         // uncomment this and adjust key if using copy_on_select=false
-        // bind "Alt c" { Copy; }
+        bind "Alt c" { Copy; }
     }
     search {
         bind "Ctrl s" { SwitchToMode "Normal"; }
@@ -333,13 +333,12 @@ plugins {
 
 // Enable or disable automatic copy (and clear) of selection when releasing mouse
 // Default: true
-//
-// copy_on_select false
+copy_on_select false
 
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
 //
-// scrollback_editor "/usr/bin/vim"
+scrollback_editor "/usr/local/bin/nvim"
 
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
