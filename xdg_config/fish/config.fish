@@ -30,3 +30,6 @@ set -g direnv_fish_mode eval_on_arrow
 # go
 set --export GOBIN "$HOME/go/bin"
 set --export PATH $GOBIN $PATH
+
+# dotnet
+complete -f -c dotnet -a "(dotnet complete (commandline -cp))"

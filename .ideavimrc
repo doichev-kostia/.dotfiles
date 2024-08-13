@@ -43,6 +43,7 @@ vnoremap <leader>y "+y
 nnoremap <leader>Y "+yy
 
 map gr <Action>(FindUsages)
+nmap gi <Action>(GotoImplementation)
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 
