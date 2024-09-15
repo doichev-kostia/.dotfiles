@@ -33,3 +33,6 @@ set --export PATH $GOBIN $PATH
 
 # dotnet
 complete -f -c dotnet -a "(dotnet complete (commandline -cp))"
+
+# mise
+/opt/homebrew/bin/mise activate fish | source
