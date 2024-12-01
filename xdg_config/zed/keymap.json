@@ -1,0 +1,30 @@
+// https://zed.dev/docs/key-bindings
+[
+	{
+		"context": "Editor && showing_completions",
+		"bindings": {
+			"ctrl-y": "editor::ConfirmCompletion"
+		}
+	},
+	{
+		"context": "Editor",
+		"bindings": {
+			"ctrl-s": "copilot::Suggest",
+			"ctrl-y": "editor::AcceptInlineCompletion",
+			"cmd-e": "file_finder::Toggle"
+		}
+	},
+	{
+		"context": "Editor && vim_mode == normal",
+		"bindings": {
+			"gd": "editor::GoToDefinition",
+			"gr": "editor::FindAllReferences"
+		}
+	},
+	{
+		"context": "Editor && vim_mode == insert",
+		"bindings": {
+			"ctrl-h": "editor::ShowSignatureHelp",
+		}
+	}
+]
