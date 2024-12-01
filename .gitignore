@@ -1,3 +1,7 @@
 .idea
 xdg_config/nvim/lazy-lock.json
 xdg_config/tmux/plugins
+
+xdg_config/zed/*
+!xdg_config/zed/settings.json
+!xdg_config/zed/keymap.json
