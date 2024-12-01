@@ -13,7 +13,7 @@ local on_attach = function(_, bufnr)
 
     nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
     nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-    nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
+    nmap('gi', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
     nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
     nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
     nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
@@ -40,6 +40,7 @@ local servers = {
     gopls = {},
     rust_analyzer = {},
     tsserver = {},
+    -- ocamllsp = {},
     html = { filetypes = { 'html', 'twig', 'hbs'} },
 
     lua_ls = {
@@ -57,15 +58,15 @@ return {
         dependencies = {
             'williamboman/mason.nvim',
             'williamboman/mason-lspconfig.nvim',
-            -- "hrsh7th/cmp-nvim-lsp",
-            -- "hrsh7th/cmp-buffer",
-            -- "hrsh7th/cmp-path",
-            -- "hrsh7th/cmp-cmdline",
-            -- "hrsh7th/nvim-cmp",
-            -- "L3MON4D3/LuaSnip",
-            -- "saadparwaiz1/cmp_luasnip",
-            -- 'j-hui/fidget.nvim',
-            -- 'folke/neodev.nvim',
+            "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-path",
+            "hrsh7th/cmp-cmdline",
+            "hrsh7th/nvim-cmp",
+            "L3MON4D3/LuaSnip",
+            "saadparwaiz1/cmp_luasnip",
+            'j-hui/fidget.nvim',
+            'folke/neodev.nvim',
         },
         config = function ()
             -- local cmp = require('cmp')
@@ -75,7 +76,7 @@ return {
             --     {},
             --     vim.lsp.protocol.make_client_capabilities(),
             --     cmp_lsp.default_capabilities())
-            --
+
             -- require("fidget").setup({})
             --
             -- require('neodev').setup()
@@ -96,8 +97,8 @@ return {
                 end,
             })
             -- local cmp_select = { behavior = cmp.SelectBehavior.Select }
-
-
+            --
+            --
             -- cmp.setup({
             --     enabled = function()
             --         -- disable completion in comments

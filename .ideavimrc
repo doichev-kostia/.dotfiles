@@ -31,6 +31,10 @@ unmap <leader><leader>
 nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
 nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
 
+"  move the selected line up/down
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
+
 " Automatically center the half-page jumps
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz

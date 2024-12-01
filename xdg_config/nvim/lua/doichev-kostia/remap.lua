@@ -24,7 +24,7 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz', { silent = true })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { silent = true })
 
 -- file explorer
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "[P]roject [V]iew" })
+vim.keymap.set("n", "<leader>pf", vim.cmd.Ex, { desc = "[P]roject [F]iles" })
 
 -- for lua execution
 vim.keymap.set("n", "<leader>ex", function()
