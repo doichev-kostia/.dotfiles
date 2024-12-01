@@ -10,8 +10,7 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs }:
   let
     configuration = { pkgs, ... }: {
-      # List packages installed in system profile. To search by name, run:
-      # $ nix-env -qaP | grep wget
+      # https://search.nixos.org/packages
       environment.systemPackages =
         [ 
           pkgs.neovim
@@ -21,6 +20,9 @@
           pkgs.cmake
           pkgs.gh
           pkgs.aerospace
+          pkgs.nushell
+          pkgs.wezterm
+          pkgs.wireshark
         ];
 
       homebrew.enable = true;
@@ -89,8 +91,6 @@
       	"tursodatabase/tap/turso"
       ];
       homebrew.casks = [
-        "wireshark"
-        "wezterm"
         "1password-cli"
       ];
 
