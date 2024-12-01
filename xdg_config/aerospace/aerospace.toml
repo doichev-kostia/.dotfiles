@@ -76,6 +76,12 @@ outer.right =      0
 cmd-h = [] # Disable "hide application"
 cmd-alt-h = [] # Disable "hide others"
 
+# Applications
+# Terminal
+alt-t = 'exec-and-forget open -a /Applications/WezTerm.app'
+# Browser
+alt-b = 'exec-and-forget open -a /Applications/Firefox.app'
+
 # All possible keys:
 # - Letters.        a, b, c, ..., z
 # - Numbers.        0, 1, 2, ..., 9
@@ -194,4 +200,5 @@ run = 'move-node-to-workspace 4'
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
 run = 'move-node-to-workspace 5'
+
 
