@@ -16,7 +16,83 @@
         [ 
           pkgs.neovim
           pkgs.direnv
+          pkgs.fzf
+          pkgs.bat
+          pkgs.cmake
+          pkgs.gh
         ];
+
+      homebrew.enable = true;
+      homebrew.brews = [
+        "jpeg-xl"
+      	"aom"
+      	"openssl@3"
+      	"autoconf"
+      	"awscli"
+      	"azure-cli"
+      	"python@3.12"
+      	"glib"
+      	"clifm"
+      	"cloudflared"
+      	"cmake"
+      	"php"
+      	"composer"
+      	"wxwidgets"
+      	"elixir-ls"
+      	"fd"
+      	"flyctl"
+      	"fnm"
+      	"openjdk"
+      	"fop"
+      	"gawk"
+      	"gcc"
+      	"git-delta"
+      	"gnu-sed"
+      	"gnu-tar"
+      	"gnutls"
+      	"gnupg"
+      	"gradle"
+      	"helix"
+      	"jq"
+      	"openblas"
+      	"julia"
+      	"kdoctor"
+      	"kotlin"
+      	"libxslt"
+      	"llvm"
+      	"lua"
+      	"luarocks"
+      	"mise"
+      	"nasm"
+      	"oha"
+      	"opam"
+      	"parallel"
+      	"pinentry-mac"
+      	"postgresql@15"
+      	"railway"
+      	"ripgrep"
+      	"rlwrap"
+      	"rustup"
+      	"shellcheck"
+      	"socat"
+      	"tlrc"
+      	"tmux"
+      	"tree"
+      	"websocat"
+      	"wget"
+      	"zellij"
+      	"pkgxdev/made/pkgx"
+      	"pulumi/tap/pulumi"
+      	"sst/tap/sst"
+      	"stripe/stripe-cli/stripe"
+      	"tursodatabase/tap/turso"
+      ];
+      homebrew.casks = [
+        "wireshark"
+        "aerospace"
+        "wezterm"
+        "1password-cli"
+      ];
 
       services.nix-daemon.enable = true;
       # Necessary for using flakes on this system.
@@ -44,6 +120,8 @@
         NSGlobalDomain.AppleInterfaceStyle = "Dark";
         NSGlobalDomain.KeyRepeat = 2;
         NSGlobalDomain."com.apple.keyboard.fnState" = true;
+        screencapture.location = "~/Pictures/screenshots";
+        screencapture.show-thumbnail = false;
       };
     };
   in
