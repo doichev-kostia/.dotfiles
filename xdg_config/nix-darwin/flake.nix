@@ -20,6 +20,7 @@
           pkgs.bat
           pkgs.cmake
           pkgs.gh
+          pkgs.aerospace
         ];
 
       homebrew.enable = true;
@@ -89,7 +90,6 @@
       ];
       homebrew.casks = [
         "wireshark"
-        "aerospace"
         "wezterm"
         "1password-cli"
       ];
@@ -114,14 +114,46 @@
       # https://mynixos.com/options/system
       # system settings
       system.defaults = {
-        dock.autohide = true;
-        finder.FXPreferredViewStyle = "clmv";
+        dock = { 
+          autohide = true;
+        };
+
+        finder = {
+          FXPreferredViewStyle = "clmv";
+          AppleShowAllExtensions = true;
+          ShowPathbar = true;
+          FXEnableExtensionChangeWarning = false;
+        };
+
+        trackpad = {
+          Clicking = true;
+          TrackpadRightClick = true;
+        };
+
         NSGlobalDomain.AppleICUForce24HourTime = true;
         NSGlobalDomain.AppleInterfaceStyle = "Dark";
         NSGlobalDomain.KeyRepeat = 2;
+        NSGlobalDomain.AppleKeyboardUIMode = 3;
         NSGlobalDomain."com.apple.keyboard.fnState" = true;
+        NSGlobalDomain.NSAutomaticWindowAnimationsEnabled = false;
         screencapture.location = "~/Pictures/screenshots";
         screencapture.show-thumbnail = false;
+
+        CustomUserPreferences = {
+          "com.apple.finder" = {
+            # When performing a search, search the current folder by default
+            FXDefaultSearchScope = "SCcf";
+          };
+
+          "com.apple.spaces" = {
+            # Aerospace
+            "spans-displays" = 0;
+          };
+          "com.apple.dock" = {
+            # Aerospace
+            "expose-group-apps" = 0;
+          };
+        };
       };
     };
   in
