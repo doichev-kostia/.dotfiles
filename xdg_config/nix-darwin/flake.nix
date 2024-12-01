@@ -14,16 +14,16 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [ 
-          pkgs.vim,
-          pkgs.direnv,
-          pkgs.nushell
+          pkgs.neovim
+          pkgs.direnv
         ];
 
+      services.nix-daemon.enable = true;
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
       # Enable alternative shell support in nix-darwin.
-      # programs.fish.enable = true;
+      programs.fish.enable = true;
 
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
@@ -39,8 +39,10 @@
   {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#simple
-    darwinConfigurations."simple" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."main" = nix-darwin.lib.darwinSystem {
       modules = [ configuration ];
     };
+
+    darwinPackages = self.darwinConfigurations."main".pkgs;
   };
 }

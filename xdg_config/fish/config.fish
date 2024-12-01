@@ -26,3 +26,6 @@ set --export PATH $GOBIN $PATH
 
 # dotnet
 complete -f -c dotnet -a "(dotnet complete (commandline -cp))"
+
+# nix
+set --export PATH "/run/current-system/sw/bin" $PATH
