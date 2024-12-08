@@ -21,8 +21,8 @@
           pkgs.gh
           pkgs.aerospace
           pkgs.nushell
-          pkgs.wezterm
           pkgs.wireshark
+          pkgs.starship
         ];
 
       homebrew.enable = true;
@@ -35,16 +35,13 @@
       	"azure-cli"
       	"python@3.12"
       	"glib"
-      	"clifm"
       	"cloudflared"
       	"cmake"
       	"php"
       	"composer"
       	"wxwidgets"
-      	"elixir-ls"
       	"fd"
       	"flyctl"
-      	"fnm"
       	"openjdk"
       	"fop"
       	"gawk"
@@ -55,42 +52,31 @@
       	"gnutls"
       	"gnupg"
       	"gradle"
-      	"helix"
       	"jq"
       	"openblas"
-      	"julia"
-      	"kdoctor"
-      	"kotlin"
       	"libxslt"
       	"llvm"
       	"lua"
-      	"luarocks"
-      	"mise"
-      	"nasm"
-      	"oha"
       	"opam"
       	"parallel"
       	"pinentry-mac"
       	"postgresql@15"
-      	"railway"
       	"ripgrep"
       	"rlwrap"
       	"rustup"
-      	"shellcheck"
       	"socat"
       	"tlrc"
       	"tmux"
       	"tree"
       	"websocat"
       	"wget"
-      	"zellij"
-      	"pkgxdev/made/pkgx"
       	"pulumi/tap/pulumi"
       	"sst/tap/sst"
       	"stripe/stripe-cli/stripe"
       	"tursodatabase/tap/turso"
       ];
       homebrew.casks = [
+        "wezterm"
         "1password-cli"
       ];
 
