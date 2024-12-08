@@ -29,3 +29,6 @@ complete -f -c dotnet -a "(dotnet complete (commandline -cp))"
 
 # nix
 set --export PATH "/run/current-system/sw/bin" $PATH
+
+# starship
+starship init fish | source
