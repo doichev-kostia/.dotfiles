@@ -8,7 +8,7 @@
 // from the command palette or from `Zed` application menu.
 {
 	"show_inline_completions": false,
-	"theme": "Rosé Pine",
+	"theme": "Catppuccin Latte",
 	"ui_font_features": {
 		"calt": false,
 		"cv01": 7

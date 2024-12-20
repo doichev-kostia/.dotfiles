@@ -18,13 +18,25 @@
 		"context": "Editor && vim_mode == normal",
 		"bindings": {
 			"gd": "editor::GoToDefinition",
-			"gr": "editor::FindAllReferences"
+			"gr": "editor::FindAllReferences",
+		}
+	},
+	{
+		"context": "Editor && vim_mode == visual",
+		"bindings": {
+			"space y": "editor::Copy"
 		}
 	},
 	{
 		"context": "Editor && vim_mode == insert",
 		"bindings": {
-			"ctrl-h": "editor::ShowSignatureHelp",
+			"ctrl-h": "editor::ShowSignatureHelp"
+		}
+	},
+	{
+		"context": "Editor && mode == full",
+		"bindings": {
+			"cmd-down": "editor::OpenExcerpts"
 		}
 	}
 ]
