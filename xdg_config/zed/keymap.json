@@ -17,8 +17,27 @@
 	{
 		"context": "Editor && vim_mode == normal",
 		"bindings": {
+			// most of them are the Zed defaults
 			"gd": "editor::GoToDefinition",
-			"gr": "editor::FindAllReferences",
+			"gD": "editor::GoToDeclaration",
+			"gy": "editor::GoToTypeDefinition",
+			"gI": "editor::GoToImplementation",
+			// Go to All references to the current word	g A
+			// Find symbol in current file	g s
+			// Find symbol in entire project	g S
+			// Go to next diagnostic	g ] or ] d
+			// Go to previous diagnostic	g [ or [ d
+			// Show inline error (hover)	g h
+			// Open the code actions menu	g .
+		}
+	},
+	{
+		"context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+		"bindings": {
+			"space": null,
+			"space g r": "editor::FindAllReferences",
+			"space r n": "editor::Rename",
+			"space d d": "diagnostics::Deploy"
 		}
 	},
 	{

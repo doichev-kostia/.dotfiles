@@ -45,5 +45,29 @@
 	"tab_size": 4,
 	"relative_line_numbers": true,
 	"preferred_line_length": 120,
-	"vim_mode": true
+	"vim_mode": true,
+	"inlay_hints": {
+		"enabled": true,
+		"show_type_hints": true,
+		"show_parameter_hints": true,
+		"show_other_hints": true
+	},
+	"lsp": {
+		"typescript-language-server": {
+			"initialization_options": {
+				// These are not supported (VSCode dotted style):
+				// "preferences.strictNullChecks": true,
+				// "preferences.target": "ES2020"
+				//
+				// These is correct (nested notation):
+				"preferences": {
+					"strictNullChecks": true,
+					"verbatimModuleSyntax": true,
+					"target": "ES2020",
+					"module": "NodeNext",
+					"moduleResolution": "NodeNext"
+				}
+			}
+		}
+	}
 }
