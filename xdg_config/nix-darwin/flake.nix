@@ -23,6 +23,9 @@
           pkgs.nushell
           pkgs.wireshark
           pkgs.starship
+          pkgs.uv
+          pkgs.duckdb
+          pkgs.lazygit
         ];
 
       homebrew.enable = true;

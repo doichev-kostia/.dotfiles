@@ -1,3 +1,7 @@
+# enable vim 
+fish_vi_key_bindings
+
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
@@ -32,3 +36,4 @@ set --export PATH "/run/current-system/sw/bin" $PATH
 
 # starship
 starship init fish | source
+uvx --generate-shell-completion fish | source
