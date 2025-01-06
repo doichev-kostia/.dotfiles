@@ -33,6 +33,8 @@
           pkgs.fish
           pkgs.eza
           pkgs.zoxide
+          pkgs.yazi
+          pkgs.duti
         ];
 
       homebrew.enable = true;
@@ -89,6 +91,15 @@
         "wezterm"
         "1password-cli"
       ];
+
+      # use Zed for opening the text files
+      system.activationScripts.extraUserActivation.text = ''
+        echo "setting up default applications..."
+        ${pkgs.duti}/bin/duti -s dev.zed.Zed .txt all
+        ${pkgs.duti}/bin/duti -s dev.zed.Zed .json all
+        ${pkgs.duti}/bin/duti -s dev.zed.Zed .md all
+        ${pkgs.duti}/bin/duti -s dev.zed.Zed .yaml all
+        '';
 
       services.nix-daemon.enable = true;
       # Necessary for using flakes on this system.
