@@ -5,9 +5,12 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    ghostty = {
+      url = "github:ghostty-org/ghostty";
+    };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, ghostty }:
   let
     configuration = { pkgs, ... }: {
       # https://search.nixos.org/packages
@@ -26,6 +29,10 @@
           pkgs.uv
           pkgs.duckdb
           pkgs.lazygit
+          pkgs.fastfetch
+          pkgs.fish
+          pkgs.eza
+          pkgs.zoxide
         ];
 
       homebrew.enable = true;
