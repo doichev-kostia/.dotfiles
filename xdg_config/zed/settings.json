@@ -7,8 +7,20 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+	"assistant": {
+		"default_model": {
+			"provider": "copilot_chat",
+			"model": "gpt-4o"
+		},
+		"version": "2"
+	},
+	// "code_actions_on_format": {
+	// 	"source.removeUnusedImports": true,
+	// 	"source.organizeImports": true,
+	// },
 	"show_inline_completions": false,
 	"theme": "Catppuccin Latte",
+	"file_icons": true,
 	"ui_font_features": {
 		"calt": false,
 		"cv01": 7
@@ -17,6 +29,13 @@
 		"calt": false,
 		"cv01": 7
 	},
+	// presentation mode
+	// "ui_font_size": 24,
+	"ui_font_size": 16,
+	"tabs": {
+		"show_diagnostics": "errors"
+	},
+	"confirm_quit": true,
 	"tab_bar": {
 		"show": false,
 		"show_nav_history_buttons": false
@@ -35,6 +54,8 @@
 	},
 	"use_auto_surround": false,
 	"use_autoclose": false,
+	"auto_signature_help": false,
+	"show_signature_help_after_edits": true,
 	"vim": {
 		"use_system_clipboard": "never"
 	},
@@ -46,13 +67,22 @@
 	"relative_line_numbers": true,
 	"preferred_line_length": 120,
 	"vim_mode": true,
+	"diagnostics": {
+		"include_warnings": true
+	},
+	"autosave": "on_focus_change",
 	"inlay_hints": {
 		"enabled": true,
 		"show_type_hints": true,
-		"show_parameter_hints": true,
+		"show_parameter_hints": false,
 		"show_other_hints": true
 	},
 	"lsp": {
+		"gopls": {
+			"initialization_options": {
+				"usePlaceholders": false
+			}
+		},
 		"typescript-language-server": {
 			"initialization_options": {
 				// These are not supported (VSCode dotted style):

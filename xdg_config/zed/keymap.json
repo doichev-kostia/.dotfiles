@@ -1,6 +1,24 @@
 // https://zed.dev/docs/key-bindings
 [
 	{
+		"context": "Workspace",
+		"bindings": {
+			"ctrl-shift-r": [
+				"task::Spawn",
+				{
+					"task_name": "vitest"
+				}
+			],
+			"cmd-k": [
+				"task::Spawn",
+				{
+					"task_name": "lazygit",
+					"reveal_target": "center"
+				}
+			]
+		}
+	},
+	{
 		"context": "Editor && showing_completions",
 		"bindings": {
 			"ctrl-y": "editor::ConfirmCompletion"
@@ -11,7 +29,8 @@
 		"bindings": {
 			"ctrl-s": "copilot::Suggest",
 			"ctrl-y": "editor::AcceptInlineCompletion",
-			"cmd-e": "file_finder::Toggle"
+			"cmd-e": "file_finder::Toggle",
+			"alt-g": null
 		}
 	},
 	{
@@ -21,7 +40,7 @@
 			"gd": "editor::GoToDefinition",
 			"gD": "editor::GoToDeclaration",
 			"gy": "editor::GoToTypeDefinition",
-			"gI": "editor::GoToImplementation",
+			"gI": "editor::GoToImplementation"
 			// Go to All references to the current word	g A
 			// Find symbol in current file	g s
 			// Find symbol in entire project	g S
@@ -38,6 +57,19 @@
 			"space g r": "editor::FindAllReferences",
 			"space r n": "editor::Rename",
 			"space d d": "diagnostics::Deploy"
+		}
+	},
+	{
+		"context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+		"bindings": {
+			"space": null,
+			"space p f": "workspace::ToggleLeftDock"
+		}
+	},
+	{
+		"context": "ProjectPanel && not_editing",
+		"bindings": {
+			"space p f": "workspace::ToggleLeftDock"
 		}
 	},
 	{
