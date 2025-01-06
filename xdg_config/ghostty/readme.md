@@ -1,0 +1,1 @@
+reload config - `cmd+shift+,`

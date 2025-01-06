@@ -1,0 +1,12 @@
+font-family = JetBrains Mono
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
+
+
+theme = catppuccin-latte
+shell-integration = fish
+
+cursor-style = block
+mouse-hide-while-typing = true
+

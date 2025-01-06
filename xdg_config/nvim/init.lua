@@ -5,6 +5,6 @@ require("doichev-kostia.set")
 require("doichev-kostia.remap")
 require("doichev-kostia.lazy")
 
-vim.cmd[[colorscheme rose-pine]]
+vim.cmd[[colorscheme catppuccin-latte]]
 
 pcall(require('telescope').load_extension, 'fzf')
