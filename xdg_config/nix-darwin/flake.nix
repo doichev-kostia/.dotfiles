@@ -39,6 +39,7 @@
 
       homebrew.enable = true;
       homebrew.brews = [
+        "seatedro/glimpse/glimpse" # join all the files for the LLM
         "jpeg-xl"
       	"aom"
       	"openssl@3"
@@ -62,14 +63,15 @@
       	"gnu-sed"
       	"gnu-tar"
       	"gnutls"
-      	"gnupg"
       	"gradle"
       	"jq"
       	"openblas"
       	"libxslt"
-      	"llvm"
+      	"llvm@18"
       	"lua"
       	"opam"
+        "imagemagick"
+        "graphicsmagick"
       	"parallel"
       	"pinentry-mac"
       	"postgresql@15"
@@ -88,7 +90,6 @@
       	"tursodatabase/tap/turso"
       ];
       homebrew.casks = [
-        "wezterm"
         "1password-cli"
       ];
 

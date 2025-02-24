@@ -36,4 +36,14 @@ set --export PATH "/run/current-system/sw/bin" $PATH
 
 # starship
 starship init fish | source
+
 uvx --generate-shell-completion fish | source
+
+# odin
+set --export PATH "/usr/local/opt/odin" $PATH
+
+
+# uv
+fish_add_path "/Users/panenco/.local/bin"
+
+set --export GPG_TTY (tty)

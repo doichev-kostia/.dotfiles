@@ -78,7 +78,7 @@ cmd-alt-h = [] # Disable "hide others"
 
 # Applications
 # Terminal
-alt-t = 'exec-and-forget open -a /Applications/WezTerm.app'
+alt-t = 'exec-and-forget open -a /Applications/Ghostty.app'
 # Browser
 alt-b = 'exec-and-forget open -a /Applications/Firefox.app'
 
@@ -186,12 +186,16 @@ if.app-id = 'com.jetbrains.goland'
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
-if.app-id = 'dev.zed.Zed'
+if.app-id = 'com.jetbrains.rustrover'
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
-if.app-id = 'com.github.wez.wezterm'
-run = 'move-node-to-workspace 3'
+if.app-id = 'com.jetbrains.clion'
+run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+if.app-id = 'dev.zed.Zed'
+run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'

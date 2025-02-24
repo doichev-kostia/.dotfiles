@@ -2,3 +2,4 @@
 .envrc
 out
 .DS_Store
+.aider.*
