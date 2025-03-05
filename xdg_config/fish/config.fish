@@ -54,3 +54,10 @@ set --export PATH "/usr/local/opt/odin" $PATH
 fish_add_path "/Users/panenco/.local/bin"
 
 set --export GPG_TTY (tty)
+
+# Rust
+if test -d
+  sudo chown -R $(whoami) "$HOME/.cargo/"
+end
+
+alias lg="lazygit"
