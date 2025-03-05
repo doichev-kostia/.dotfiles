@@ -3,6 +3,7 @@ font-feature = -calt
 font-feature = -liga
 font-feature = -dlig
 
+command = /usr/local/bin/fish --login --interactive
 
 theme = catppuccin-latte
 shell-integration = fish

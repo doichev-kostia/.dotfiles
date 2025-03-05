@@ -6,11 +6,17 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+# JetBrains
+set -x PATH "$HOME/Library/Application Support/JetBrains/Toolbox/scripts" $PATH
+
 
 # pnpm
-set -gx PNPM_HOME "/Users/panenco/Library/pnpm"
-set -gx PATH "$PNPM_HOME" $PATH
+set -gx PNPM_HOME "$HOME/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
 # pnpm end
+
 #cargo
 set -gx PATH "$HOME/.cargo/bin" $PATH;
 
@@ -25,6 +31,7 @@ direnv hook fish | source
 set -g direnv_fish_mode eval_on_arrow
 
 # go
+set --export PATH "/usr/local/go/bin" $PATH
 set --export GOBIN "$HOME/go/bin"
 set --export PATH $GOBIN $PATH
 

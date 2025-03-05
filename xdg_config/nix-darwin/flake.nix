@@ -35,10 +35,21 @@
           pkgs.zoxide
           pkgs.yazi
           pkgs.duti
+          pkgs.rustup
         ];
 
       homebrew.enable = true;
+      homebrew.taps = [
+        "seatedro/glimpse"
+        "sst/tap"
+        "pulumi/tap"
+        "stripe/stripe-cli"
+        "tursodatabase/tap"
+      ];
       homebrew.brews = [
+        "pnpm"
+        "fnm"
+        "starship"
         "seatedro/glimpse/glimpse" # join all the files for the LLM
         "jpeg-xl"
       	"aom"
@@ -91,6 +102,7 @@
       ];
       homebrew.casks = [
         "1password-cli"
+        "obs"
       ];
 
       # use Zed for opening the text files

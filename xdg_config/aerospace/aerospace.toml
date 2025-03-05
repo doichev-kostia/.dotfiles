@@ -52,6 +52,13 @@ run = 'layout floating'
 if.app-name-regex-substring = 'finder'
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-name-regex-substring = 'FaceTime'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Telegram'
+run = 'layout floating'
 
 # Gaps between windows (inner-*) and between monitor edges (outer-*).
 # Possible values:
@@ -203,6 +210,10 @@ run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
+run = 'move-node-to-workspace 4'
+
+[[on-window-detected]]
+if.app-id = 'im.riot.app' # Element Chat
 run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
