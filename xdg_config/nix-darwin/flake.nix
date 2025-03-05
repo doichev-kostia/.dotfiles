@@ -35,7 +35,7 @@
           pkgs.zoxide
           pkgs.yazi
           pkgs.duti
-          pkgs.rustup
+          # pkgs.rustup
         ];
 
       homebrew.enable = true;
@@ -47,6 +47,8 @@
         "tursodatabase/tap"
       ];
       homebrew.brews = [
+        "jordanbaird-ice"
+        "binutils"
         "pnpm"
         "fnm"
         "starship"
@@ -103,6 +105,7 @@
       homebrew.casks = [
         "1password-cli"
         "obs"
+        "reminders-menubar"
       ];
 
       # use Zed for opening the text files
