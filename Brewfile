@@ -31,7 +31,6 @@ brew "zoxide" # cd with history
 brew "duti"
 brew "rustup"
 brew "binutils"
-brew "deno" # JS runtime
 brew "pnpm" # Nodejs package manager
 brew "fnm" # Nodejs versions manager
 brew "seatedro/glimpse/glimpse" # tokenize files to put into the LLM

@@ -106,3 +106,4 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export PNPM_HOME="/Users/panenco/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
+. "/Users/doichevkostia/.deno/env"
