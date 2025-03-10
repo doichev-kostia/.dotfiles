@@ -5,30 +5,36 @@ tap "pulumi/tap"
 tap "stripe/stripe-cli"
 tap "tursodatabase/tap"
 tap "nikitabobko/tap"
+tap "jesseduffield/lazydocker"
 
+brew "yazi" # CLI file manager
+brew "ffmpeg"
+brew "sevenzip" # archives
+brew "poppler" # PDF preview
+brew "imagemagick" # Images
+brew "jesseduffield/lazydocker/lazydocker" # TUI for docker
 brew "neovim"
-brew "direnv"
-brew "fzf"
-brew "bat"
+brew "direnv" # env vars hooks
+brew "fzf" # fuzzy find
+brew "bat" # better cat
 brew "cmake"
-brew "gh"
+brew "gh" # GitHub CLI
 brew "nushell"
 brew "wireshark"
-brew "starship"
-brew "uv"
-brew "duckdb"
-brew "lazygit"
+brew "starship" # Fish prompt
+brew "uv" # Python package and project manager
+brew "duckdb" # in-process analytical DB
+brew "lazygit" # TUI for git
 brew "fastfetch"
 brew "eza"
-brew "zoxide"
-brew "yazi"
+brew "zoxide" # cd with history
 brew "duti"
 brew "rustup"
 brew "binutils"
-brew "pnpm"
-brew "fnm"
-brew "starship"
-brew "seatedro/glimpse/glimpse"
+brew "deno" # JS runtime
+brew "pnpm" # Nodejs package manager
+brew "fnm" # Nodejs versions manager
+brew "seatedro/glimpse/glimpse" # tokenize files to put into the LLM
 brew "jpeg-xl"
 brew "aom"
 brew "openssl@3"

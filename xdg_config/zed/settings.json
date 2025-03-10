@@ -10,9 +10,12 @@
 	"assistant": {
 		"default_model": {
 			"provider": "copilot_chat",
-			"model": "gpt-4o"
+			"model": "sonnet-3.7"
 		},
 		"version": "2"
+	},
+	"features": {
+		"edit_prediction_provider": "copilot"
 	},
 	// "code_actions_on_format": {
 	// 	"source.removeUnusedImports": true,

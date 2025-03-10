@@ -20,9 +20,25 @@ else
 fi
 
 # Dock settings
+
+# Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
+# Don’t automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
+# Remove the auto-hiding Dock delay
+defaults write com.apple.dock autohide-delay -float 0
+# Remove the animation when hiding/showing the Dock
+defaults write com.apple.dock autohide-time-modifier -float 0
+# Don’t show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
+
+
+
 
 # Finder settings
+#
+# Finder: disable window animations and Get Info animations
+defaults write com.apple.finder DisableAllAnimations -bool true
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 defaults write com.apple.finder AppleShowAllExtensions -bool true
 defaults write com.apple.finder ShowPathbar -bool true
