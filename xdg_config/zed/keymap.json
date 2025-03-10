@@ -28,7 +28,7 @@
 		"context": "Editor",
 		"bindings": {
 			"ctrl-s": "copilot::Suggest",
-			"ctrl-y": "editor::AcceptInlineCompletion",
+			"ctrl-y": "editor::AcceptEditPrediction",
 			"cmd-e": "file_finder::Toggle",
 			"alt-g": null
 		}

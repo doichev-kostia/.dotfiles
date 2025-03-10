@@ -9,7 +9,6 @@ end
 # JetBrains
 set -x PATH "$HOME/Library/Application Support/JetBrains/Toolbox/scripts" $PATH
 
-
 # pnpm
 set -gx PNPM_HOME "$HOME/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
@@ -27,8 +26,10 @@ if [ -f '/usr/local/opt/google-cloud-sdk/path.fish.inc' ]; . '/usr/local/opt/goo
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
-direnv hook fish | source
-set -g direnv_fish_mode eval_on_arrow
+if command -q direnv
+  direnv hook fish | source
+  set -g direnv_fish_mode eval_on_arrow
+end
 
 # go
 set --export PATH "/usr/local/go/bin" $PATH
@@ -36,22 +37,29 @@ set --export GOBIN "$HOME/go/bin"
 set --export PATH $GOBIN $PATH
 
 # dotnet
-complete -f -c dotnet -a "(dotnet complete (commandline -cp))"
+if command -q dotnet
+    complete -f -c dotnet -a "(dotnet complete (commandline -cp))"
+end
 
 # nix
-set --export PATH "/run/current-system/sw/bin" $PATH
+# set --export PATH "/run/current-system/sw/bin" $PATH
 
 # starship
-starship init fish | source
+if command -q starship
+  starship init fish | source
+end
 
-uvx --generate-shell-completion fish | source
 
 # odin
 set --export PATH "/usr/local/opt/odin" $PATH
+set --export PATH "/opt/odin" $PATH
 
 
 # uv
 fish_add_path "/Users/panenco/.local/bin"
+if command -q uvx
+  uvx --generate-shell-completion fish | source
+end
 
 set --export GPG_TTY (tty)
 
@@ -60,4 +68,9 @@ set --export GPG_TTY (tty)
 #  sudo chown -R $(whoami) "$HOME/.cargo/"
 #end
 
-alias lg="lazygit"
+if command -q lazygit
+  alias lg="lazygit"
+end
+
+# uv
+fish_add_path "/Users/doichevkostia/.local/bin"
