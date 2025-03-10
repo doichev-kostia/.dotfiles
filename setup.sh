@@ -9,7 +9,7 @@ ln -sf ~/.dotfiles/xdg_config/* ~/.config/
 
 brew bundle
 ./install.sh
-source ./xdg_config/fish/fisher/fisher.fish # fish package manager (https://github.com/jorgebucaran/fisher)
+source ./xdg_config/fish/functions/fisher.fish # fish package manager (https://github.com/jorgebucaran/fisher)
 fisher install jorgebucaran/fisher
 ./macos/setup.sh
 
