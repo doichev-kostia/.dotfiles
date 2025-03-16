@@ -77,3 +77,5 @@ end
 
 # uv
 fish_add_path "/Users/doichevkostia/.local/bin"
+
+
