@@ -7,6 +7,7 @@ tap "tursodatabase/tap"
 tap "nikitabobko/tap"
 tap "jesseduffield/lazydocker"
 
+brew "protobuf" # Protocol Buffer
 brew "yazi" # CLI file manager
 brew "ffmpeg"
 brew "sevenzip" # archives
@@ -29,7 +30,6 @@ brew "fastfetch"
 brew "eza"
 brew "zoxide" # cd with history
 brew "duti"
-brew "rustup"
 brew "binutils"
 brew "pnpm" # Nodejs package manager
 brew "fnm" # Nodejs versions manager
@@ -88,3 +88,4 @@ cask "obs"
 cask "reminders-menubar"
 cask "nikitabobko/tap/aerospace"
 cask "jordanbaird-ice"
+cask "ghostty"

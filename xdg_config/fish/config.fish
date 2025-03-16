@@ -76,4 +76,13 @@ if command -q lazygit
 end
 
 # uv
-fish_add_path "/Users/doichevkostia/.local/bin"
+fish_add_path "$HOME/.local/bin"
+
+# solana
+fish_add_path "$HOME/.local/share/solana/install/active_release/bin" 
+
+# avm
+fish_add_path "$HOME/.avm/bin"
+
+#ghidra for reverse engineering
+set --export PATH "/opt/ghidra" $PATH
