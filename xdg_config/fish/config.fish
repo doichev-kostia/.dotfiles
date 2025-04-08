@@ -1,6 +1,11 @@
 # enable vim 
 fish_vi_key_bindings
 
+if not set -q SSH_AUTH_SOCK
+    eval (ssh-agent -c)
+    set -U SSH_AUTH_SOCK $SSH_AUTH_SOCK
+    set -U SSH_AGENT_PID $SSH_AGENT_PID
+end
 
 if status is-interactive
     # Commands to run in interactive sessions can go here

@@ -7,6 +7,7 @@ tap "tursodatabase/tap"
 tap "nikitabobko/tap"
 tap "jesseduffield/lazydocker"
 
+brew "git-lfs" # git large files
 brew "protobuf" # Protocol Buffer
 brew "yazi" # CLI file manager
 brew "ffmpeg"
@@ -89,3 +90,4 @@ cask "reminders-menubar"
 cask "nikitabobko/tap/aerospace"
 cask "jordanbaird-ice"
 cask "ghostty"
+cask "monitorcontrol"
