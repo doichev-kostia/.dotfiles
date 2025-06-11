@@ -1,5 +1,5 @@
 function fzf_cd
-    set selected (find ~/work ~/ ~/personal ~/personal/playground ~/personal/libs ~/work/gh $(pwd) -mindepth 1 -maxdepth 1 -type d | fzf)
+    set selected (find ~/work ~/ ~/personal ~/personal/playground ~/personal/libs ~/work/gh ~/personal/gh $(pwd) -mindepth 1 -maxdepth 1 -type d | fzf)
 
     if test -z "$selected"
         return 0

@@ -1,11 +1,10 @@
-# enable vim 
+# enable vim
 fish_vi_key_bindings
 
-if not set -q SSH_AUTH_SOCK
-    eval (ssh-agent -c)
-    set -U SSH_AUTH_SOCK $SSH_AUTH_SOCK
-    set -U SSH_AGENT_PID $SSH_AGENT_PID
-end
+ssh-add --apple-load-keychain 2>/dev/null
+# ssh-add --apple-use-keychain ~/.ssh/github_personal
+# ssh-add --apple-use-keychain ~/.ssh/github
+
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
@@ -84,10 +83,12 @@ end
 fish_add_path "$HOME/.local/bin"
 
 # solana
-fish_add_path "$HOME/.local/share/solana/install/active_release/bin" 
+fish_add_path "$HOME/.local/share/solana/install/active_release/bin"
 
 # avm
 fish_add_path "$HOME/.avm/bin"
 
 #ghidra for reverse engineering
 set --export PATH "/opt/ghidra" $PATH
+
+fish_add_path "$HOME/.nimble/bin"

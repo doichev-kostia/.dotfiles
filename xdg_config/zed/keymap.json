@@ -30,7 +30,9 @@
 			"ctrl-s": "copilot::Suggest",
 			"ctrl-y": "editor::AcceptEditPrediction",
 			"cmd-e": "file_finder::Toggle",
-			"alt-g": null
+			"alt-g": null,
+			"alt-alt-up": "editor::AddSelectionAbove",
+			"alt-alt-down": "editor::AddSelectionBelow",
 		}
 	},
 	{

@@ -6,7 +6,11 @@ tap "stripe/stripe-cli"
 tap "tursodatabase/tap"
 tap "nikitabobko/tap"
 tap "jesseduffield/lazydocker"
+tap "minio/stable"
 
+brew "mongosh"
+brew "minio/stable/mc" # minio(S3) client
+brew "brotli" # compression
 brew "git-lfs" # git large files
 brew "protobuf" # Protocol Buffer
 brew "yazi" # CLI file manager
