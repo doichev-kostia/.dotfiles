@@ -1,10 +1,14 @@
 # enable vim
 fish_vi_key_bindings
 
+set -x EDITOR "nvim"
+
 ssh-add --apple-load-keychain 2>/dev/null
 # ssh-add --apple-use-keychain ~/.ssh/github_personal
 # ssh-add --apple-use-keychain ~/.ssh/github
 
+# LLVM
+fish_add_path /opt/homebrew/opt/llvm/bin
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
@@ -12,6 +16,12 @@ end
 
 # JetBrains
 set -x PATH "$HOME/Library/Application Support/JetBrains/Toolbox/scripts" $PATH
+
+# Brew
+set -x HOMEBREW_NO_AUTO_UPDATE true
+
+# Make
+set -x PATH "/opt/homebrew/opt/make/libexec/gnubin" $PATH
 
 # pnpm
 set -gx PNPM_HOME "$HOME/Library/pnpm"
@@ -75,6 +85,10 @@ set --export GPG_TTY (tty)
 #  sudo chown -R $(whoami) "$HOME/.cargo/"
 #end
 
+# speed up the rust builds `cargo install sccache`
+set -x RUSTC_WRAPPER sccache
+
+
 if command -q lazygit
   alias lg="lazygit"
 end
@@ -92,3 +106,6 @@ fish_add_path "$HOME/.avm/bin"
 set --export PATH "/opt/ghidra" $PATH
 
 fish_add_path "$HOME/.nimble/bin"
+
+# opencode
+fish_add_path /Users/doichevkostia/.opencode/bin

@@ -209,6 +209,15 @@ if.app-id = 'com.jetbrains.clion'
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
+if.app-id = 'com.jetbrains.fleet'
+run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+if.app-id = 'com.jetbrains.WebStorm'
+run = 'move-node-to-workspace 2'
+
+
+[[on-window-detected]]
 if.app-id = 'dev.zed.Zed'
 run = 'move-node-to-workspace 2'
 
@@ -222,6 +231,10 @@ run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
 if.app-id = 'im.riot.app' # Element Chat
+run = 'move-node-to-workspace 4'
+
+[[on-window-detected]]
+if.app-id = 'io.element.elementx' # Element Chat
 run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]

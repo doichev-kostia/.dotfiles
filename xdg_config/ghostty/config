@@ -5,7 +5,7 @@ font-feature = -dlig
 
 command = /usr/local/bin/fish --login --interactive
 
-theme = catppuccin-latte
+theme = Catppuccin Latte
 shell-integration = fish
 
 cursor-style = block

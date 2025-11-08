@@ -8,6 +8,9 @@ tap "nikitabobko/tap"
 tap "jesseduffield/lazydocker"
 tap "minio/stable"
 
+brew "make"
+brew "sst/tap/opencode" # cli with an ai
+brew "dive" # inspect docker images
 brew "mongosh"
 brew "minio/stable/mc" # minio(S3) client
 brew "brotli" # compression
@@ -64,6 +67,7 @@ brew "gnu-tar"
 brew "gnutls"
 brew "gradle"
 brew "jq"
+brew "yq"
 brew "openblas"
 brew "libxslt"
 brew "llvm@18"
@@ -95,3 +99,4 @@ cask "nikitabobko/tap/aerospace"
 cask "jordanbaird-ice"
 cask "ghostty"
 cask "monitorcontrol"
+cask "localsend"

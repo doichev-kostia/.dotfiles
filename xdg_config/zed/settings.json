@@ -7,12 +7,22 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+	"show_completions_on_input": true,
+ "git_panel": {
+  "sort_by_path": true,
+  "dock": "right"
+ },
+ "max_tabs": 5,
+	"project_panel": {
+		"dock": "right"
+	},
 	"agent": {
+		"enabled": true,
+		"button": false,
 		"default_model": {
 			"provider": "copilot_chat",
-			"model": "sonnet-3.7"
+			"model": "sonnet-3.7",
 		},
-		"version": "2"
 	},
 	"git": {
 		"inline_blame": {
@@ -24,13 +34,8 @@
 	"features": {
 		"edit_prediction_provider": "copilot"
 	},
-	// "code_actions_on_format": {
-	// 	"source.removeUnusedImports": true,
-	// 	"source.organizeImports": true,
-	// },
-	"show_edit_predictions": false,
-	"theme": "Fleet Light",
-	"file_icons": true,
+	"show_edit_predictions": true,
+	"theme": "Ayu Dark",
 	"ui_font_features": {
 		"calt": false,
 		"cv01": 7
@@ -39,9 +44,7 @@
 		"calt": false,
 		"cv01": 7
 	},
-	// presentation mode
-	// "ui_font_size": 24,
-	"ui_font_size": 16,
+	"ui_font_size": 15.0,
 	"tabs": {
 		"show_diagnostics": "errors"
 	},
@@ -55,6 +58,7 @@
 		"show": "never"
 	},
 	"edit_predictions": {
+		"mode": "subtle",
 		"disabled_globs": [
 			".env",
 			".env.*",
@@ -71,7 +75,7 @@
 		"use_system_clipboard": "never"
 	},
 	"base_keymap": "JetBrains",
-	"buffer_font_size": 15.0,
+	"buffer_font_size": 14.0,
 	"formatter": "language_server",
 	"hard_tabs": true,
 	"tab_size": 4,
@@ -83,7 +87,8 @@
 	},
 	"autosave": "on_focus_change",
 	"inlay_hints": {
-		"enabled": true,
+		"show_background": false,
+  "enabled": true,
 		"show_type_hints": true,
 		"show_parameter_hints": true,
 		"show_other_hints": true
@@ -97,6 +102,12 @@
 			"format_on_save": "off",
 			"remove_trailing_whitespace_on_save": false,
 			"ensure_final_newline_on_save": false
+		},
+		"Plain Text": {
+			"completions": null,
+			"ensure_final_newline_on_save": false,
+			"format_on_save": "off",
+			"show_completions_on_input": false
 		},
 		"TypeScript": {
 			"inlay_hints": {
@@ -142,11 +153,6 @@
 		},
 		"typescript-language-server": {
 			"initialization_options": {
-				// These are not supported (VSCode dotted style):
-				// "preferences.strictNullChecks": true,
-				// "preferences.target": "ES2020"
-				//
-				// These is correct (nested notation):
 				"preferences": {
 					"strictNullChecks": true,
 					"verbatimModuleSyntax": true,

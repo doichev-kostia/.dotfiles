@@ -19,6 +19,13 @@
 		}
 	},
 	{
+		"context": "Editor && vim_mode == visual",
+		"bindings": {
+			"shift-k": "editor::MoveLineUp",
+			"shift-j": "editor::MoveLineDown"
+		}
+	},
+	{
 		"context": "Editor && showing_completions",
 		"bindings": {
 			"ctrl-y": "editor::ConfirmCompletion"
@@ -27,6 +34,7 @@
 	{
 		"context": "Editor",
 		"bindings": {
+			"ctrl-c": "editor::ShowCompletions",
 			"ctrl-s": "copilot::Suggest",
 			"ctrl-y": "editor::AcceptEditPrediction",
 			"cmd-e": "file_finder::Toggle",
@@ -42,7 +50,8 @@
 			"gd": "editor::GoToDefinition",
 			"gD": "editor::GoToDeclaration",
 			"gy": "editor::GoToTypeDefinition",
-			"gI": "editor::GoToImplementation"
+			"gI": "editor::GoToImplementation",
+			"space f s": "outline::Toggle",
 			// Go to All references to the current word	g A
 			// Find symbol in current file	g s
 			// Find symbol in entire project	g S
