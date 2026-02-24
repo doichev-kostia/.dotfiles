@@ -7,22 +7,45 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-	"show_completions_on_input": true,
- "git_panel": {
-  "sort_by_path": true,
-  "dock": "right"
+	"agent_servers": {
+  "claude": {
+   "default_config_options": {
+    "mode": "bypassPermissions"
+   }
+  },
+  "codex": {
+   "default_config_options": {
+    "reasoning_effort": "medium",
+    "model": "gpt-5.3-codex"
+   },
+   "favorite_config_option_values": {
+    "model": [
+     "gpt-5.3-codex"
+    ]
+   }
+  },
+  "opencode": {
+   "favorite_models": [
+    "opencode/kimi-k2.5"
+   ],
+   "default_model": "opencode/kimi-k2.5",
+   "type": "registry"
+  }
  },
- "max_tabs": 5,
+ "remove_trailing_whitespace_on_save": false,
+	"show_completions_on_input": true,
+	"git_panel": {
+		"tree_view": true,
+		"sort_by_path": true,
+		"dock": "right"
+	},
+	"max_tabs": 5,
 	"project_panel": {
 		"dock": "right"
 	},
 	"agent": {
-		"enabled": true,
-		"button": false,
-		"default_model": {
-			"provider": "copilot_chat",
-			"model": "sonnet-3.7",
-		},
+		"notify_when_agent_waiting": "primary_screen",
+		"model_parameters": []
 	},
 	"git": {
 		"inline_blame": {
@@ -31,11 +54,8 @@
 	},
 	"format_on_save": "off",
 	"ensure_final_newline_on_save": false,
-	"features": {
-		"edit_prediction_provider": "copilot"
-	},
 	"show_edit_predictions": true,
-	"theme": "Ayu Dark",
+	"theme": "Fleet Dark",
 	"ui_font_features": {
 		"calt": false,
 		"cv01": 7
@@ -58,7 +78,11 @@
 		"show": "never"
 	},
 	"edit_predictions": {
-		"mode": "subtle",
+		"sweep": {
+   "privacy_mode": true
+  },
+  "provider": "zed",
+  "mode": "subtle",
 		"disabled_globs": [
 			".env",
 			".env.*",
@@ -79,7 +103,7 @@
 	"formatter": "language_server",
 	"hard_tabs": true,
 	"tab_size": 4,
-	"relative_line_numbers": true,
+	"relative_line_numbers": "enabled",
 	"preferred_line_length": 120,
 	"vim_mode": true,
 	"diagnostics": {
@@ -88,7 +112,7 @@
 	"autosave": "on_focus_change",
 	"inlay_hints": {
 		"show_background": false,
-  "enabled": true,
+		"enabled": true,
 		"show_type_hints": true,
 		"show_parameter_hints": true,
 		"show_other_hints": true
@@ -101,7 +125,10 @@
 		"Markdown": {
 			"format_on_save": "off",
 			"remove_trailing_whitespace_on_save": false,
-			"ensure_final_newline_on_save": false
+			"ensure_final_newline_on_save": false,
+			"soft_wrap": "none",
+			"show_wrap_guides": true,
+			"completions": null,
 		},
 		"Plain Text": {
 			"completions": null,
@@ -133,6 +160,11 @@
 		]
 	},
 	"lsp": {
+		"zls": {
+			"binary": {
+				"path": "/opt/homebrew/bin/zls"
+			}
+		},
 		"rust-analyzer": {
 			"initialization_options": {
 				"diagnostics": {

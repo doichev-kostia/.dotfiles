@@ -1,0 +1,33 @@
+{
+    "window.commandCenter": true,
+    "workbench.colorTheme": "Cursor Light",
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 3,
+    "workbench.editor.showTabs": "none",
+    "files.autoSave": "onFocusChange",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.gotoSymbol"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "r",
+                "n"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        }
+    ],
+    "emmet.includeLanguages": {
+        "postcss": "css"
+    }
+}

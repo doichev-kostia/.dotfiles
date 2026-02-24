@@ -53,14 +53,6 @@ set --export PATH "/usr/local/go/bin" $PATH
 set --export GOBIN "$HOME/go/bin"
 set --export PATH $GOBIN $PATH
 
-# dotnet
-if command -q dotnet
-    complete -f -c dotnet -a "(dotnet complete (commandline -cp))"
-end
-
-# nix
-# set --export PATH "/run/current-system/sw/bin" $PATH
-
 # starship
 if command -q starship
   starship init fish | source
@@ -70,13 +62,8 @@ end
 # odin
 set --export PATH "/usr/local/opt/odin" $PATH
 set --export PATH "/opt/odin" $PATH
-
-
-# uv
-fish_add_path "/Users/panenco/.local/bin"
-if command -q uvx
-  uvx --generate-shell-completion fish | source
-end
+# roc
+set --export PATH "/opt/roc/zig-out/bin" $PATH
 
 set --export GPG_TTY (tty)
 
@@ -95,17 +82,6 @@ end
 
 # uv
 fish_add_path "$HOME/.local/bin"
-
-# solana
-fish_add_path "$HOME/.local/share/solana/install/active_release/bin"
-
-# avm
-fish_add_path "$HOME/.avm/bin"
-
-#ghidra for reverse engineering
-set --export PATH "/opt/ghidra" $PATH
-
-fish_add_path "$HOME/.nimble/bin"
 
 # opencode
 fish_add_path /Users/doichevkostia/.opencode/bin

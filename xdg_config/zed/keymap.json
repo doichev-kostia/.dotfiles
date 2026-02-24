@@ -92,7 +92,7 @@
 	{
 		"context": "Editor && vim_mode == insert",
 		"bindings": {
-			"ctrl-h": "editor::ShowSignatureHelp"
+			"cmd-p": "editor::ShowSignatureHelp"
 		}
 	},
 	{
@@ -117,5 +117,76 @@
 				}
 			]
 		}
-	}
+	},
+ {
+  "context": "Workspace",
+  "bindings": {
+   "cmd-shift-p": null
+  }
+ },
+ {
+  "context": "Workspace",
+  "bindings": {
+   "cmd-p": null
+  }
+ },
+ {
+  "context": "Picker > Editor",
+  "bindings": {
+   "ctrl-h": null
+  }
+ },
+ {
+  "context": "vim_mode == literal",
+  "bindings": {
+   "ctrl-h": null
+  }
+ },
+ {
+  "context": "Editor",
+  "bindings": {
+   "ctrl-h": null
+  }
+ },
+ {
+  "context": "((VimControl && !menu) || (!Editor && !Terminal))",
+  "bindings": {
+   "ctrl-h": "workspace::ActivatePaneLeft"
+  }
+ },
+ {
+  "context": "((VimControl && !menu) || (!Editor && !Terminal))",
+  "bindings": {
+   "ctrl-l": "workspace::ActivatePaneRight"
+  }
+ },
+ {
+  "bindings": {
+   "cmd-+": null
+  }
+ },
+ {
+  "context": "Onboarding",
+  "bindings": {
+   "cmd-+": null
+  }
+ },
+ {
+  "context": "Welcome",
+  "bindings": {
+   "cmd-+": null
+  }
+ },
+ {
+  "context": "(Editor && mode == full)",
+  "bindings": {
+   "ctrl-g": null
+  }
+ },
+ {
+  "context": "(Editor && mode == full)",
+  "bindings": {
+   "cmd-l": "agent::AddSelectionToThread"
+  }
+ }
 ]

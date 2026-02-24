@@ -50,12 +50,30 @@ map gr <Action>(FindUsages)
 nmap gi <Action>(GotoImplementation)
 map <leader>gs <Action>(FileStructurePopup)
 
+nnoremap <silent> gh :action ShowErrorDescription<CR>
+xnoremap <silent> gh <Esc>:action ShowErrorDescription<CR>
+
+" next diagnostic
+nnoremap <silent> dn :<C-u>action GotoNextError<CR>
+
+" previous diagnostic
+nnoremap <silent> dp :<C-u>action GotoPreviousError<CR>
+
 
 " Easier split navigation (no need for Ctrl+W prefix)
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" Vim-style folding in IdeaVim
+noremap zc :action CollapseRegion<CR>
+noremap zo :action ExpandRegion<CR>
+noremap zC :action CollapseRegionRecursively<CR>
+noremap zO :action ExpandRegionRecursively<CR>
+noremap za :action ToggleFoldRegion<CR>
+noremap zM :action CollapseAllRegions<CR>
+noremap zR :action ExpandAllRegions<CR>
 
 " Focus previous split pane (left/up)
 " nnoremap <leader>tp :action PrevSplitter<CR>

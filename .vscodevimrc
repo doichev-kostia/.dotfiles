@@ -1,0 +1,65 @@
+set number relativenumber
+set scrolloff = 5
+set tabstop = 4
+set softtabstop = 4
+set shiftwidth = 4
+set expandtab = true
+
+let mapleader = " "
+
+unmap <leader><leader>
+
+" Remap for dealing with word wrap
+nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
+nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
+
+"  move the selected line up/down
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
+
+" Automatically center the half-page jumps
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+" Map <leader>y to yank in normal and visual mode to the clipboard
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+
+" Map <leader>Y to yank the entire line in normal mode to the clipboard
+nnoremap <leader>Y "+yy
+
+
+" Easier split navigation (no need for Ctrl+W prefix)
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Focus previous split pane (left/up)
+" nnoremap <leader>tp :action PrevSplitter<CR>
+
+" Focus next split pane (right/down)
+" nnoremap <leader>tn :action NextSplitter<CR>
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+"Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+" Plug 'tpope/vim-commentary'
+" Surround plugin
+Plug 'tpope/vim-surround'
+" Repeat plugin
+"Plug 'tpope/vim-repeat'
+" Easymotion plugin
+Plug 'easymotion/vim-easymotion'
+" Git plugin
+"Plug 'tpope/vim-fugitive'
+" Commentary
+Plug 'tpope/vim-commentary'
+" Scope plugin
+" Plug 'wellle/context.vim'
+
+" let g:context_enabled = 1:
+
+
