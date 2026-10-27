@@ -5,3 +5,10 @@ xdg_config/tmux/plugins
 xdg_config/zed/*
 !xdg_config/zed/settings.json
 !xdg_config/zed/keymap.json
+
+# Local search index and herdr runtime state, not config
+.codemogger/
+xdg_config/herdr/*.log
+xdg_config/herdr/session.json
+xdg_config/herdr/release-notes.json
+xdg_config/herdr/.plugins.lock

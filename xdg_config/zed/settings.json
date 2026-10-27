@@ -1,198 +1,211 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run the `open default settings` command
-// from the command palette or from `Zed` application menu.
 {
-	"agent_servers": {
-  "claude": {
-   "default_config_options": {
-    "mode": "bypassPermissions"
-   }
+  "enable_language_server": false,
+  "diff_view_style": "unified",
+  "cli_default_open_behavior": "new_window",
+  "outline_panel": {
+    "dock": "left"
   },
-  "codex": {
-   "default_config_options": {
-    "reasoning_effort": "medium",
-    "model": "gpt-5.3-codex"
-   },
-   "favorite_config_option_values": {
-    "model": [
-     "gpt-5.3-codex"
-    ]
-   }
+  "collaboration_panel": {
+    "dock": "left"
   },
-  "opencode": {
-   "favorite_models": [
-    "opencode/kimi-k2.5"
-   ],
-   "default_model": "opencode/kimi-k2.5",
-   "type": "registry"
-  }
- },
- "remove_trailing_whitespace_on_save": false,
-	"show_completions_on_input": true,
-	"git_panel": {
-		"tree_view": true,
-		"sort_by_path": true,
-		"dock": "right"
-	},
-	"max_tabs": 5,
-	"project_panel": {
-		"dock": "right"
-	},
-	"agent": {
-		"notify_when_agent_waiting": "primary_screen",
-		"model_parameters": []
-	},
-	"git": {
-		"inline_blame": {
-			"enabled": false
-		},
-	},
-	"format_on_save": "off",
-	"ensure_final_newline_on_save": false,
-	"show_edit_predictions": true,
-	"theme": "Fleet Dark",
-	"ui_font_features": {
-		"calt": false,
-		"cv01": 7
-	},
-	"buffer_font_features": {
-		"calt": false,
-		"cv01": 7
-	},
-	"ui_font_size": 15.0,
-	"tabs": {
-		"show_diagnostics": "errors"
-	},
-	"confirm_quit": true,
-	"tab_bar": {
-		"show": false,
-		"show_nav_history_buttons": false,
-		"show_tab_bar_buttons": false
-	},
-	"scrollbar": {
-		"show": "never"
-	},
-	"edit_predictions": {
-		"sweep": {
-   "privacy_mode": true
+  "buffer_font_family": ".ZedMono",
+  "context_servers": {
+    },
+  "agent_servers": {
+    "opencode": {
+      "type": "registry"
+    },
+    "claude-acp": {
+      "default_config_options": {
+        "model": "default"
+      },
+      "favorite_config_option_values": {
+        "model": [
+          "default"
+        ]
+      },
+      "type": "registry"
+    },
+    "codex-acp": {
+      "default_config_options": {
+        "mode": "full-access"
+      },
+      "type": "registry",
+      "favorite_config_option_values": {
+        "model": [
+          "gpt-5.4"
+        ]
+      }
+    }
   },
-  "provider": "zed",
-  "mode": "subtle",
-		"disabled_globs": [
-			".env",
-			".env.*",
-			".envrc",
-			"keymap.json",
-			"settings.json"
-		]
-	},
-	"use_auto_surround": false,
-	"use_autoclose": false,
-	"auto_signature_help": false,
-	"show_signature_help_after_edits": true,
-	"vim": {
-		"use_system_clipboard": "never"
-	},
-	"base_keymap": "JetBrains",
-	"buffer_font_size": 14.0,
-	"formatter": "language_server",
-	"hard_tabs": true,
-	"tab_size": 4,
-	"relative_line_numbers": "enabled",
-	"preferred_line_length": 120,
-	"vim_mode": true,
-	"diagnostics": {
-		"include_warnings": true
-	},
-	"autosave": "on_focus_change",
-	"inlay_hints": {
-		"show_background": false,
-		"enabled": true,
-		"show_type_hints": true,
-		"show_parameter_hints": true,
-		"show_other_hints": true
-	},
-	"languages": {
-		"Rust": {
-			"ensure_final_newline_on_save": false,
-			"show_completions_on_input": false,
-		},
-		"Markdown": {
-			"format_on_save": "off",
-			"remove_trailing_whitespace_on_save": false,
-			"ensure_final_newline_on_save": false,
-			"soft_wrap": "none",
-			"show_wrap_guides": true,
-			"completions": null,
-		},
-		"Plain Text": {
-			"completions": null,
-			"ensure_final_newline_on_save": false,
-			"format_on_save": "off",
-			"show_completions_on_input": false
-		},
-		"TypeScript": {
-			"inlay_hints": {
-				"enabled": true,
-				"show_type_hints": false,
-				"show_parameter_hints": false,
-				"show_other_hints": true
-			}
-		},
-		"TSX": {
-			"inlay_hints": {
-				"enabled": true,
-				"show_type_hints": false,
-				"show_parameter_hints": false,
-				"show_other_hints": true
-			}
-		}
-	},
-	"file_types": {
-		"Emmet": [
-			"*.jsx",
-			"*.tsx"
-		]
-	},
-	"lsp": {
-		"zls": {
-			"binary": {
-				"path": "/opt/homebrew/bin/zls"
-			}
-		},
-		"rust-analyzer": {
-			"initialization_options": {
-				"diagnostics": {
-					"experimental": {
-						"enable": false
-					}
-				},
-				"checkOnSave": false,
-				"check": {
-					"workspace": true
-				}
-			}
-		},
-		"gopls": {
-			"initialization_options": {
-				"usePlaceholders": false
-			}
-		},
-		"typescript-language-server": {
-			"initialization_options": {
-				"preferences": {
-					"strictNullChecks": true,
-					"verbatimModuleSyntax": true,
-					"target": "ES2020",
-					"module": "NodeNext",
-					"moduleResolution": "NodeNext"
-				}
-			}
-		}
-	}
+  "remove_trailing_whitespace_on_save": false,
+  "show_completions_on_input": true,
+  "git_panel": {
+    "tree_view": true,
+    "sort_by_path": true,
+    "dock": "right",
+  },
+  "max_tabs": 5,
+  "project_panel": {
+    "dock": "right",
+  },
+  "agent": {
+    "dock": "right",
+    "notify_when_agent_waiting": "primary_screen",
+    "model_parameters": [],
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+    },
+  },
+  "format_on_save": "off",
+  "ensure_final_newline_on_save": false,
+  "show_edit_predictions": true,
+  "theme": "IntelliJ Light",
+  "ui_font_features": {
+    "calt": false,
+    "cv01": 7,
+  },
+  "buffer_font_features": {
+    "calt": false,
+    "cv01": 7,
+  },
+  "ui_font_size": 15.0,
+  "tabs": {
+    "show_diagnostics": "errors",
+  },
+  "confirm_quit": true,
+  "tab_bar": {
+    "show": false,
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false,
+  },
+  "scrollbar": {
+    "show": "never",
+  },
+  "edit_predictions": {
+    "sweep": {
+      "privacy_mode": true,
+    },
+    "provider": "zed",
+    "mode": "subtle",
+    "disabled_globs": [
+      ".env",
+      ".env.*",
+      ".envrc",
+      "keymap.json",
+      "settings.json",
+    ],
+  },
+  "use_auto_surround": false,
+  "use_autoclose": false,
+  "auto_signature_help": false,
+  "show_signature_help_after_edits": true,
+  "vim": {
+    "use_system_clipboard": "never",
+  },
+  "base_keymap": "JetBrains",
+  "buffer_font_size": 14.0,
+  "formatter": "language_server",
+  "hard_tabs": true,
+  "tab_size": 4,
+  "relative_line_numbers": "enabled",
+  "preferred_line_length": 120,
+  "vim_mode": true,
+  "diagnostics": {
+    "include_warnings": true,
+  },
+  "autosave": "on_focus_change",
+  "inlay_hints": {
+    "show_background": false,
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+  },
+  "completions": {
+  },
+  "languages": {
+    "Odin": {
+      "show_completions_on_input": false,
+      "format_on_save": "off",
+      "remove_trailing_whitespace_on_save": false,
+      "ensure_final_newline_on_save": false,
+      "soft_wrap": "none",
+    },
+    "Rust": {
+      "ensure_final_newline_on_save": false,
+      "show_completions_on_input": false,
+    },
+    "Markdown": {
+      "format_on_save": "off",
+      "remove_trailing_whitespace_on_save": false,
+      "ensure_final_newline_on_save": false,
+      "soft_wrap": "none",
+      "show_wrap_guides": true,
+      "completions": null,
+    },
+    "Plain Text": {
+      "completions": null,
+      "ensure_final_newline_on_save": false,
+      "format_on_save": "off",
+      "show_completions_on_input": false,
+    },
+    "TypeScript": {
+      "inlay_hints": {
+        "enabled": true,
+        "show_type_hints": false,
+        "show_parameter_hints": false,
+        "show_other_hints": true,
+      },
+    },
+    "TSX": {
+      "inlay_hints": {
+        "enabled": true,
+        "show_type_hints": false,
+        "show_parameter_hints": false,
+        "show_other_hints": true,
+      },
+    },
+  },
+  "file_types": {
+    "Emmet": ["*.jsx", "*.tsx"],
+  },
+  "lsp": {
+    "zls": {
+      "binary": {
+        "path": "/opt/homebrew/bin/zls",
+      },
+    },
+    "rust-analyzer": {
+      "initialization_options": {
+        "diagnostics": {
+          "experimental": {
+            "enable": false,
+          },
+        },
+        "checkOnSave": false,
+        "check": {
+          "workspace": true,
+        },
+      },
+    },
+    "gopls": {
+      "initialization_options": {
+        "usePlaceholders": false,
+      },
+    },
+    "typescript-language-server": {
+      "initialization_options": {
+        "preferences": {
+          "strictNullChecks": true,
+          "verbatimModuleSyntax": true,
+          "target": "ES2020",
+          "module": "NodeNext",
+          "moduleResolution": "NodeNext",
+        },
+      },
+    },
+  },
 }

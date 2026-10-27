@@ -32,18 +32,6 @@
 		}
 	},
 	{
-		"context": "Editor",
-		"bindings": {
-			"ctrl-c": "editor::ShowCompletions",
-			"ctrl-s": "copilot::Suggest",
-			"ctrl-y": "editor::AcceptEditPrediction",
-			"cmd-e": "file_finder::Toggle",
-			"alt-g": null,
-			"alt-alt-up": "editor::AddSelectionAbove",
-			"alt-alt-down": "editor::AddSelectionBelow",
-		}
-	},
-	{
 		"context": "Editor && vim_mode == normal",
 		"bindings": {
 			// most of them are the Zed defaults
@@ -110,12 +98,7 @@
 					"replace_newest": false
 				}
 			], // Add selection to Next Find Match
-			"ctrl-shift-g": [
-				"editor::SelectPrevious",
-				{
-					"replace_newest": false
-				}
-			]
+			"ctrl-shift-g": "editor::UndoSelection"
 		}
 	},
  {
@@ -175,12 +158,6 @@
   "context": "Welcome",
   "bindings": {
    "cmd-+": null
-  }
- },
- {
-  "context": "(Editor && mode == full)",
-  "bindings": {
-   "ctrl-g": null
   }
  },
  {

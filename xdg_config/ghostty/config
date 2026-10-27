@@ -17,3 +17,10 @@ bell-features = no-audio
 bell-features = no-attention
 bell-features = no-title
 bell-features = no-border
+
+# fff file picker (fish function fff_pick, bound to Alt+P)
+keybind = cmd+shift+o=text:\x1bp
+# fff content search (fish function fff_grep, bound to Alt+G); replaces end_search
+keybind = cmd+shift+f=text:\x1bg
+# fff symbol search, like JetBrains Go to Symbol (fish function fff_symbol, bound to Alt+R)
+keybind = cmd+alt+o=text:\x1br

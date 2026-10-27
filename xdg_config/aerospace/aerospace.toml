@@ -222,10 +222,6 @@ if.app-id = 'dev.zed.Zed'
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
-if.app-id = 'com.mitchellh.ghostty'
-run = 'move-node-to-workspace 3'
-
-[[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
 run = 'move-node-to-workspace 4'
 
@@ -237,8 +233,22 @@ run = 'move-node-to-workspace 4'
 if.app-id = 'io.element.elementx' # Element Chat
 run = 'move-node-to-workspace 4'
 
+# -- Workspace 5 -- 
 [[on-window-detected]]
-if.app-id = 'com.spotify.client'
+if.app-id = 'com.linear' 
 run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+if.app-id = 'com.openai.codex' 
+run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+if.app-id = 'ai.opencode.desktop' 
+run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+if.app-id = 'com.anthropic.claudefordesktop' 
+run = 'move-node-to-workspace 5'
+
 
 

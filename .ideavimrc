@@ -7,10 +7,6 @@ set number relativenumber
 set ideajoin
 set idearefactormode=keep
 set scrolloff = 5
-set tabstop = 4
-set softtabstop = 4
-set shiftwidth = 4
-set expandtab = true
 
 " Do incremental searching.
 set incsearch
@@ -18,9 +14,9 @@ set incsearch
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
-if s:MaySet('backspace')
-  set backspace=indent,eol,start
-endif
+" if s:MaySet('backspace')
+"   set backspace=indent,eol,start
+" endif
 
 let mapleader = " "
 
@@ -59,6 +55,8 @@ nnoremap <silent> dn :<C-u>action GotoNextError<CR>
 " previous diagnostic
 nnoremap <silent> dp :<C-u>action GotoPreviousError<CR>
 
+nmap ff <Action>(FFF.FindFiles)
+nmap fg <Action>(FFF.FindContent)
 
 " Easier split navigation (no need for Ctrl+W prefix)
 nnoremap <C-h> <C-w>h
@@ -108,4 +106,4 @@ set NERDTree
 let g:NERDTreeMapActivateNode = 'l'
 
 " OCaml
-set rtp^="/Users/panenco/.opam/default/share/ocp-indent/vim"
+" set rtp^="/Users/panenco/.opam/default/share/ocp-indent/vim"

@@ -24,9 +24,9 @@ set -x HOMEBREW_NO_AUTO_UPDATE true
 set -x PATH "/opt/homebrew/opt/make/libexec/gnubin" $PATH
 
 # pnpm
-set -gx PNPM_HOME "$HOME/Library/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+set -gx PNPM_HOME "/Users/doichevkostia/Library/pnpm"
+if not string match -q -- "$PNPM_HOME/bin" $PATH
+  set -gx PATH "$PNPM_HOME/bin" $PATH
 end
 # pnpm end
 
@@ -72,8 +72,9 @@ set --export GPG_TTY (tty)
 #  sudo chown -R $(whoami) "$HOME/.cargo/"
 #end
 
-# speed up the rust builds `cargo install sccache`
-set -x RUSTC_WRAPPER sccache
+# sccache disabled: conflicts with cargo incremental builds and its cache was too small
+# for the stxr monorepo (~1% hit rate). Re-enable per-project if doing cold/CI builds.
+# set -x RUSTC_WRAPPER sccache
 
 
 if command -q lazygit
@@ -85,3 +86,15 @@ fish_add_path "$HOME/.local/bin"
 
 # opencode
 fish_add_path /Users/doichevkostia/.opencode/bin
+
+fish_add_path -a "/Users/doichevkostia/.foundry/bin"
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+test -r '/Users/doichevkostia/.opam/opam-init/init.fish' && source '/Users/doichevkostia/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
+# END opam configuration
+~/.local/bin/mise activate fish | source
