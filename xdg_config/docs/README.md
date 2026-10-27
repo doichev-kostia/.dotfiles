@@ -136,7 +136,6 @@ User agents in `~/Library/LaunchAgents/`:
 | `io.fffq.fffd` | `~/.local/bin/fffd`, the fffq search daemon |
 | `com.<user>.hourly-check-in` | `~/.local/bin/hourly-check-in` |
 | `dev.<user>.finance.backup` | `~/Library/Application Support/finance-backup/run.sh` |
-| `ai.openclaw.gateway` | openclaw gateway; **broken**, it points at a Node under `~/.local/share/fnm`, which no longer exists |
 | `com.github.facebook.watchman` | watchman |
 | Google updater / keystone, JetBrains Toolbox | vendor updaters |
 
@@ -166,3 +165,5 @@ restarts one.
 - 2026-10-27: Brewfile caught up with what is installed (39 entries appended).
 - 2026-10-27: deno removed (`~/.deno`, `~/.zsh/completions`, its `~/.zshrc` and fish lines); fnm
   and mongosh dropped from the Brewfile and fish config (neither was installed).
+- 2026-10-27: openclaw removed: launch agent `ai.openclaw.gateway` unloaded, its plist and
+  `~/.openclaw` (905 MB of logs) moved to the Trash.
