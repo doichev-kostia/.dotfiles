@@ -31,7 +31,7 @@ Rules for keeping it useful:
 - Terminal: **Ghostty**; multiplexer: **zellij**. tmux is installed but not used.
 - Prompt: starship. Window manager: AeroSpace.
 - **Agent shells are zsh, not fish.** The Claude Code Bash tool runs zsh and reads `~/.zshrc`
-  (deno completions, `~/.deno/env`, Solana on PATH). That file is a plain file in `$HOME`, not the
+  (zsh completions and Solana on PATH). That file is a plain file in `$HOME`, not the
   `.zshrc` kept in the dotfiles repo.
 
 ## Homebrew
@@ -47,8 +47,7 @@ comments):
 brew bundle dump --file=/tmp/Brewfile.dump --force --no-vscode --no-go --no-cargo --no-uv --no-npm
 ```
 
-`brew bundle check` reports fnm and mongosh as unmet: both are listed but not installed through
-Homebrew.
+`brew bundle check` also fails when a listed package is only outdated; `--verbose` shows which.
 
 ## mise (global tools)
 
@@ -67,7 +66,8 @@ The `wrappers` line makes every `cargo` call go through mbx. Projects pin their 
 their own `mise.toml` (the stxr workspace pins Rust through `rust-toolchain.toml`).
 
 Other version managers: rustup (toolchains 1.95.0, 1.97.1 default, 1.99.0, stable, a dated
-nightly), fnm for Node, uv and poetry for Python, deno in `~/.deno`.
+nightly), Node through mise shims, uv and poetry for Python. No deno, fnm or mongosh (removed
+2026-10-27).
 
 ## Rust builds
 
@@ -136,7 +136,7 @@ User agents in `~/Library/LaunchAgents/`:
 | `io.fffq.fffd` | `~/.local/bin/fffd`, the fffq search daemon |
 | `com.<user>.hourly-check-in` | `~/.local/bin/hourly-check-in` |
 | `dev.<user>.finance.backup` | `~/Library/Application Support/finance-backup/run.sh` |
-| `ai.openclaw.gateway` | openclaw gateway on the fnm Node install |
+| `ai.openclaw.gateway` | openclaw gateway; **broken**, it points at a Node under `~/.local/share/fnm`, which no longer exists |
 | `com.github.facebook.watchman` | watchman |
 | Google updater / keystone, JetBrains Toolbox | vendor updaters |
 
@@ -164,3 +164,5 @@ restarts one.
 - 2026-10-27: this doc created.
 - 2026-10-27: `~/.zshrc` fixed (`compinit` and the Solana `export PATH` were joined on one line).
 - 2026-10-27: Brewfile caught up with what is installed (39 entries appended).
+- 2026-10-27: deno removed (`~/.deno`, `~/.zsh/completions`, its `~/.zshrc` and fish lines); fnm
+  and mongosh dropped from the Brewfile and fish config (neither was installed).

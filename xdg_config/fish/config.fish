@@ -30,9 +30,6 @@ if not string match -q -- "$PNPM_HOME/bin" $PATH
 end
 # pnpm end
 
-# deno
-set -gx PATH "$HOME/.deno/bin" $PATH;
-
 #cargo
 set -gx PATH "$HOME/.cargo/bin" $PATH;
 

@@ -12,7 +12,6 @@ brew "herdr"
 brew "make"
 brew "sst/tap/opencode" # cli with an ai
 brew "dive" # inspect docker images
-brew "mongosh"
 brew "minio/stable/mc" # minio(S3) client
 brew "brotli" # compression
 brew "git-lfs" # git large files
@@ -41,7 +40,6 @@ brew "zoxide" # cd with history
 brew "duti"
 brew "binutils"
 brew "pnpm" # Nodejs package manager
-brew "fnm" # Nodejs versions manager
 brew "seatedro/glimpse/glimpse" # tokenize files to put into the LLM
 brew "jpeg-xl"
 brew "aom"
